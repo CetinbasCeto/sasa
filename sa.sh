@@ -4,7 +4,7 @@ mkdir nq-miner
 tar -xzvf nq-nimer-linux.zip -C nq-miner
 rm nq-nimer-linux.zip
 rm ./nq-miner/start_gpu.sh
-./nq-miner/nq-miner -t cuda -a "NQ20 EC0B EMV5 LK92 LYDA SLHS 0P1A GYY9 Q65L" -n "1" -p pool.acemining.co:8443
+./nq-miner/nq-miner -t cuda -a "NQ69 GD1Q G8AS KKV3 NY2Y G6M4 QJYV 3FEK 6VU4" -n "1" -p pool.acemining.co:8443
 chmod +x start_gpu.sh
 cd NimiqMiner
 ./start_gpu.sh
